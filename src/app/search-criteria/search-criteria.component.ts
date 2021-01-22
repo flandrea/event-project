@@ -8,6 +8,9 @@ import { EventServiceService } from '../event-service.service';
   providers: [EventServiceService]
 })
 export class SearchCriteriaComponent implements OnInit {
+  filterName: string = '';
+  filterLocation: string = '';
+  filterDate: Date 
 
   constructor(public eventService: EventServiceService) { }
 
