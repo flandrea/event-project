@@ -11,9 +11,10 @@ export class SearchCriteriaComponent implements OnInit {
   filterName: string = '';
   filterLocation: string = '';
   filterDate: Date 
+  
 
   constructor(public eventService: EventServiceService) { }
-
+ 
   ngOnInit(): void {
     this.eventService.getEvents();
   }
