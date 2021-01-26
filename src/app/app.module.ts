@@ -7,6 +7,7 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 import { HttpClientModule } from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
