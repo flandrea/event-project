@@ -16,7 +16,12 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(public eventService: EventServiceService) { }
  
   ngOnInit(): void {
-    this.eventService.getEvents();
+    //this.eventService.getEvents(this.filterName);
+  }
+  gitFilteredResults() :void {
+    console.log(this.filterName);
+    this.eventService.getEvents(this.filterName)
+
   }
 
 }

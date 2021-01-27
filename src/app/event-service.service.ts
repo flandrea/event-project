@@ -10,9 +10,12 @@ export class EventServiceService {
   events : any [] = [];
 
   constructor(private http: HttpClient) { }
+  //filterDate: string = "";
+  //filterLocation: string = "";
+  //filterName: string = "";
 
-  getEvents() {
-    const requestUrl = this.getUrlWithAPIKey() + "&keyword=football";
+  getEvents(filterName: string) {
+    const requestUrl = this.getUrlWithAPIKey() + "&keyword=" + filterName + "&";
     this.http.get(requestUrl).subscribe(
       (response: any) => {
         this.events = response._embedded.events;
