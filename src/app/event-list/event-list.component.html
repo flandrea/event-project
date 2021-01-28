@@ -1,5 +1,5 @@
 
-<!-- <div *ngFor="let eventList of eventService.events">
-    
-</div> -->
+<app-search-criteria *ngFor="let eventList of eventService.lists" [list]="event">
+    <p>{{lists.name}}</p>
+</app-search-criteria>
 <h1> I am a header</h1>
