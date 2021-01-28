@@ -9,12 +9,14 @@ import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.compo
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     EventListComponent,
-    BucketlistPageComponent
+    BucketlistPageComponent,
+    
   ],
   imports: [
     BrowserModule,
