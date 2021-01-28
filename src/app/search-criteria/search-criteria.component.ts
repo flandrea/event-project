@@ -11,7 +11,7 @@ export class SearchCriteriaComponent implements OnInit {
   
   filterName: string = '';
   filterLocation: string = '';
-  filterDate: Date 
+  filterDate: string = '';
   
 
   constructor(public eventService: EventServiceService) { }
@@ -20,8 +20,9 @@ export class SearchCriteriaComponent implements OnInit {
     //this.eventService.getEvents(this.filterName);
   }
   gitFilteredResults() :void {
-    console.log(this.filterName);
-    this.eventService.getEvents(this.filterName)
+    //console.log(this.filterName);
+    console.log(this.filterDate);
+    this.eventService.getEvents(this.filterName, this.filterLocation, this.filterDate)
 
   }
 
