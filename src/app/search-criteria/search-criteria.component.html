@@ -1,10 +1,9 @@
-
 <div>
     
     <h1></h1>
     <input type="date" placeholder="search date" name="filterDate" [(ngModel)]="filterDate"> <input>
     <input type = "text" placeholder="search location" name = "filterLocation" [(ngModel)]="filterLocation" > <input>
     <input type ="text" placeholder="search name of event" name = "filterName" [(ngModel)]="filterName" > <input>
-    <button (click)="getEvents()" [routerLink]="['/event-list']"] >Submit</button> 
+    <button (click)="gitFilteredResults()" [routerLink]="['/event-list']" >Submit</button> 
     
 </div>

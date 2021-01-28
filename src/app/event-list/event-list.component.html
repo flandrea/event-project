@@ -1,5 +1,4 @@
-
-<!-- <div *ngFor="let eventList of eventService.events">
-    
-</div> -->
 <h1> I am a header</h1>
+<app-search-criteria *ngFor="let eventList of eventService.events" [eventList] = "event"></app-search-criteria>
+
+<h2></h2>
