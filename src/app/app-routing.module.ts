@@ -5,9 +5,10 @@ import { EventListComponent } from './event-list/event-list.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 
 const routes: Routes = [
+  {path: '', component:SearchCriteriaComponent},
    {path: 'search-criteria', component: SearchCriteriaComponent},
    {path: 'event-list', component: EventListComponent},
-   {path: 'bucklist-page', component: BucketlistPageComponent},
+   {path: 'bucketlist-page', component: BucketlistPageComponent},
 ];
 
 @NgModule({
