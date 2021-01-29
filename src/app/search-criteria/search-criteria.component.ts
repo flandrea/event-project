@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EventListComponent } from '../event-list/event-list.component';
+=======
+import { Router } from '@angular/router';
+>>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
 =======
 import { Router } from '@angular/router';
 >>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4

@@ -27,7 +27,11 @@ export class EventServiceService {
   //favorites: Event[] = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor(private http: HttpClient, private router:Router) { }
+=======
+  constructor(private http: HttpClient, public router: Router) { }
+>>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
 =======
   constructor(private http: HttpClient, public router: Router) { }
 >>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
@@ -58,6 +62,10 @@ export class EventServiceService {
           // console.log(eventResponse);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        console.log(this.lists);
+>>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
 =======
         console.log(this.lists);
 >>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
