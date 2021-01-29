@@ -22,8 +22,8 @@ export class EventServiceService {
   public lists: EventList[] = [];
   url = "https://app.ticketmaster.com/discovery/v2/events.json";
   apiKey = "vGvn53C4TYR52idXEVgtEtqt5eg5AeSz";
-  events : any [] = [];
-  favorites: Event[] = [];
+  public events : any [] = [];
+  //favorites: Event[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class EventServiceService {
       
       (response: any) => {
         this.events = response._embedded.events;
-        //console.log(this.events);
+        console.log("eventsArray", this.events);
         for (let list of this.events) {
           const eventResponse: EventList = {
             url: list.url,
@@ -49,7 +49,9 @@ export class EventServiceService {
             state: list._embedded.venues[0].state.name,
           };
           this.lists.push(eventResponse);
+          console.log("event response", eventResponse);
         }
+        
       },
       (error) => {
         console.error(error);
