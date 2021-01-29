@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventServiceService } from '../event-service.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class SearchCriteriaComponent implements OnInit {
   filterDate: string = '';
   
 
-  constructor(public eventService: EventServiceService) { }
+  constructor(public eventService: EventServiceService, public router: Router) { }
  
   ngOnInit(): void {
     //this.eventService.getEvents(this.filterName);

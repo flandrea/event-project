@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 interface EventList {
   url: string;
@@ -25,12 +26,12 @@ export class EventServiceService {
   events : any [] = [];
   //favorites: Event[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public router: Router) { }
 
 
   getEvents(filterName: string, filterLocation:string, filterDate: string, ) {
-    const requestUrl = this.getUrlWithAPIKey() + "&keyword=" + filterName + "&postalCode=" + filterLocation + "&startDateTime" + filterDate;
-    
+    const requestUrl = this.getUrlWithAPIKey() + "&keyword=" + filterName //+ "&postalCode=" + filterLocation + "&startDateTime" + filterDate;
+    this.router.navigate(['/event-list']);
     this.http.get(requestUrl).subscribe(
       
       (response: any) => {
@@ -48,10 +49,12 @@ export class EventServiceService {
             city: list._embedded.venues[0].city.name,
             state: list._embedded.venues[0].state.name,
           };
-          this.lists.push(eventResponse);
+          this.lists = [...this.lists, eventResponse];
+          // this.lists.push(eventResponse);
           // console.log(eventResponse);
         }
-        
+        console.log(this.lists);
+      
       },
       (error) => {
         console.error(error);
