@@ -1,9 +1,35 @@
 <div>
     
     <h1></h1>
+<<<<<<< HEAD
+    <input type="date" placeholder="search date" name="filterDate" [(ngModel)]="filterDate">
+    <input type = "text" placeholder="search location" name = "filterLocation" [(ngModel)]="filterLocation" >
+    <input type ="text" placeholder="search name of event" name = "filterName" [(ngModel)]="filterName" >
+=======
     <input type="date" placeholder="search date" name="filterDate" [(ngModel)]="filterDate"> <input>
     <input type = "text" placeholder="search location" name = "filterLocation" [(ngModel)]="filterLocation" > <input>
     <input type ="text" placeholder="search name of event" name = "filterName" [(ngModel)]="filterName" > <input>
-    <button (click)="gitFilteredResults()" [routerLink]="['/event-list']" >Submit</button> 
+>>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
+    <button (click)="gitFilteredResults()" >Submit</button> 
     
 </div>
+
+
+    <ul class= "eventPost" *ngFor="let event of eventService.lists">
+       <li> Event: {{ event.name }} </li> <button>❤</button>
+       <ul>
+            <img class="resize" [src] = "event.images" />
+            <li> <a href ="{{ event.url }}"> View full event details at Ticketmaster</a> </li>
+       </ul>
+       <div class = "moreInfo">
+           <button>More Info</button>
+           <ul>
+               <li>Date: {{ event.localDate }}</li>
+               <li>Time: {{ event.localTime }}</li>
+               <li>City/State: {{ event.city}}, {{ event.state }}</li>
+           </ul>
+           
+       </div>
+    </ul>
+
+

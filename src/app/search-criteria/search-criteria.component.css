@@ -1,0 +1,8 @@
+.resize{
+    max-width: 35%;
+    max-height: 35%;
+}
+
+.eventPost{
+    border: 1px black solid;
+}

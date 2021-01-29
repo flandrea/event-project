@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
+import { EventListComponent } from '../event-list/event-list.component';
+=======
+import { Router } from '@angular/router';
+>>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
 import { EventServiceService } from '../event-service.service';
 
 @Component({
@@ -14,7 +19,7 @@ export class SearchCriteriaComponent implements OnInit {
   filterDate: string = '';
   
 
-  constructor(public eventService: EventServiceService) { }
+  constructor(public eventService: EventServiceService, public router: Router) { }
  
   ngOnInit(): void {
     //this.eventService.getEvents(this.filterName);
@@ -23,7 +28,7 @@ export class SearchCriteriaComponent implements OnInit {
     console.log(this.filterName);
     // console.log(this.filterDate);
     this.eventService.getEvents(this.filterName, this.filterLocation, this.filterDate)
-
+    
   }
 
 }
