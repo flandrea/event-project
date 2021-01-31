@@ -33,7 +33,7 @@ export class EventServiceService {
 
 
   getEvents(filterName: string, filterLocation:string, filterDate: string, ) {
-    const requestUrl = this.getUrlWithAPIKey() + "&keyword=" + filterName //+ "&postalCode=" + filterLocation + "&startDateTime" + filterDate;
+    const requestUrl = this.getUrlWithAPIKey() + "&keyword=" + filterName + "&postalCode=" + filterLocation + "&startDateTime" + filterDate;
     this.router.navigate(['/event-list']);
     this.http.get(requestUrl).subscribe(
       

@@ -36,5 +36,10 @@ saveFavorites(evt: EventList) : void {
   this.eventService.favorites.push(evt);
 }
 
-    
+public showInfo = false;
+toggleInfo(){
+  this.showInfo = !this.showInfo;
+  console.log("works");
+}
+
 }

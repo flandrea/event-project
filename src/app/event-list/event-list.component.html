@@ -1,20 +1,18 @@
+<div class="eventItem" *ngFor="let event of eventService.lists">  
 
-
-<div *ngFor="let event of eventService.lists">  
-
-<li> Event: {{event.name}} </li> <button (click)="saveFavorites(event)">❤</button>
+<div class="eventName"> Event: {{event.name}} </div> 
+<button class=favorite (click)="saveFavorites(event)">❤</button> <button [routerLink]="['/bucketlist-page']" routerLinkActive="router-link-active">See Favorites</button>
 <ul>
      <img class="resize" [src] = "event.images" />
-     <li> <a href ="{{event.url}}"> View full event details at Ticketmaster</a> </li>
+     <li class = "eventLink"> <a href ="{{event.url}}"> View full event details at Ticketmaster</a> </li>
 </ul>
 <div class = "moreInfo">
-    <button>More Info</button>
-    <ul>
+    <button (click)="toggleInfo()" >More Info</button>
+    <ul [class.showInfo] = "showInfo === false">
         <li>Date: {{event.localDate}}</li>
         <li>Time: {{event.localTime}}</li>
         <li>City/State: {{event.city}}, {{event.state}}</li>
     </ul>
     
 </div>
-<button [routerLink]="['/bucketlist-page']" routerLinkActive="router-link-active">See Favorites</button>
 </div>

@@ -23,4 +23,5 @@ export class BucketlistPageComponent implements OnInit {
     this.eventService.favorites.splice(index, 1);
   }
 
+
 }

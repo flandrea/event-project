@@ -22,7 +22,7 @@ export class SearchCriteriaComponent implements OnInit {
   }
   gitFilteredResults() :void {
     // console.log(this.filterName);
-    // console.log(this.filterDate);
+    console.log(this.filterDate);
     this.eventService.getEvents(this.filterName, this.filterLocation, this.filterDate)
     
   }

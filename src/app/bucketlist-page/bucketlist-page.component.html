@@ -1,13 +1,15 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">  
 
-<div *ngFor="let list of eventService.favorites; let myIndex=index">  
+<div class="eventItem" *ngFor="let list of eventService.favorites; let myIndex=index">  
 
-    <li> Event: {{list.name}} </li> <button (click)="removeFavorite(myIndex)">❤</button>
+    <li class = "eventName"> Event: {{list.name}} </li> 
+    <button class=delete (click)="removeFavorite(myIndex)">♻</button>
     <ul>
          <img class="resize" [src] = "list.images" />
          <li>Date: {{list.localDate}}</li>
-           
-        </ul>
-     
-
+         <li>City/State: {{list.city}}, {{list.state}}</li>
+         <li class = "eventLink"> <a href ="{{list.url}}"> View full event details at Ticketmaster</a> </li>
+    </ul>
      
     

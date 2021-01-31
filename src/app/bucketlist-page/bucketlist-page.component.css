@@ -1,0 +1,45 @@
+.eventName{
+    font-size:20px;
+    text-decoration: overline #03A08D ;
+}
+
+.resize{
+    max-width: 65%;
+    max-height: 65%;
+}
+
+.delete{
+    font-size: 18px;
+    border-radius: 3px;
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.eventItem{
+    /* border: 1px black solid; */
+    font-family: 'Rye', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 600px;
+    border: 1px solid #A8D4D3;
+    box-shadow: 5px 10px #F48595;
+    border-radius: 3px;
+}
+
+
+.eventLink{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* button{
+    font-family: 'Rye', cursive;
+    border-radius: 3px;
+    margin: 2px;
+    border: 1px solid black;
+    font-size: 14px;
+} */
+
+li{
+    list-style-type: none;
+}

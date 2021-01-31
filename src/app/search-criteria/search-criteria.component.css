@@ -1,8 +1,26 @@
-.resize{
-    max-width: 35%;
-    max-height: 35%;
+h1{
+    color: #03A08D;
+    font-family: 'Rye', cursive;
+    -webkit-text-stroke: .025px black;
+    text-shadow: 2px 2px black;
+    font-size: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
 }
 
-.eventPost{
-    border: 1px black solid;
+input{
+    font-size: 18px;
+    font-family: 'Rye', cursive;
+}
+
+button{
+    font-size: 18px;
+    font-family: 'Rye', cursive;
+}
+
+.searchFields{
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
 }
