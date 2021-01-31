@@ -1,4 +1,20 @@
-<h1> I am a header</h1>
-<!-- <app-search-criteria *ngFor="let eventList of eventService.events" [eventList] = "event">     </app-search-criteria> -->
-<div *ngFor="let event of eventService.lists"> Hello, {{event.name}}    </div>
 
+
+<div *ngFor="let event of eventService.lists">  
+
+<li> Event: {{event.name}} </li> <button (click)="saveFavorites(event)">❤</button>
+<ul>
+     <img class="resize" [src] = "event.images" />
+     <li> <a href ="{{event.url}}"> View full event details at Ticketmaster</a> </li>
+</ul>
+<div class = "moreInfo">
+    <button>More Info</button>
+    <ul>
+        <li>Date: {{event.localDate}}</li>
+        <li>Time: {{event.localTime}}</li>
+        <li>City/State: {{event.city}}, {{event.state}}</li>
+    </ul>
+    
+</div>
+<button [routerLink]="['/bucketlist-page']" routerLinkActive="router-link-active">See Favorites</button>
+</div>

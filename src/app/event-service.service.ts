@@ -20,21 +20,16 @@ interface EventList {
   providedIn: 'root',
 })
 export class EventServiceService {
+  showFavorite: boolean =true;
   public lists: EventList[] = [];
   url = "https://app.ticketmaster.com/discovery/v2/events.json";
   apiKey = "vGvn53C4TYR52idXEVgtEtqt5eg5AeSz";
   events : any [] = [];
-  //favorites: Event[] = [];
+  public favorites: EventList[] = [];
+  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  constructor(private http: HttpClient, private router:Router) { }
-=======
-  constructor(private http: HttpClient, public router: Router) { }
->>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
-=======
-  constructor(private http: HttpClient, public router: Router) { }
->>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
+  constructor(private http: HttpClient, private router:Router) {}
+
 
 
   getEvents(filterName: string, filterLocation:string, filterDate: string, ) {
@@ -44,7 +39,7 @@ export class EventServiceService {
       
       (response: any) => {
         this.events = response._embedded.events;
-        console.log("eventsArray", this.events);
+        // console.log("eventsArray", this.events);
         for (let list of this.events) {
           const eventResponse: EventList = {
             url: list.url,
@@ -57,27 +52,28 @@ export class EventServiceService {
             city: list._embedded.venues[0].city.name,
             state: list._embedded.venues[0].state.name,
           };
-          this.lists = [...this.lists, eventResponse];
-          // this.lists.push(eventResponse);
+          // this.lists = [...this.lists, eventResponse];
+          this.lists.push(eventResponse);
           // console.log(eventResponse);
+
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+ 
+
         console.log(this.lists);
->>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
-=======
-        console.log(this.lists);
->>>>>>> 82f6d419e9845c5bc42a6c4d38152ee8d34c3ed4
+
+        
       
       },
       (error) => {
         console.error(error);
       }
       
+      
     );
   }
   getUrlWithAPIKey() {
     return `${this.url}?apikey=${this.apiKey}`;
   }
-}
+    
+    
+  }
