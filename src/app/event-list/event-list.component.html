@@ -1,13 +1,13 @@
 <div class="eventItem" *ngFor="let event of eventService.lists">  
 
 <div class="eventName"> Event: {{event.name}} </div> 
-<button class=favorite (click)="saveFavorites(event)">❤</button> <button [routerLink]="['/bucketlist-page']" routerLinkActive="router-link-active">See Favorites</button>
-<ul>
+<button class=favorite (click)="saveFavorites(event)">❤</button> <button class ="favorite-button" [routerLink]="['/bucketlist-page']" routerLinkActive="router-link-active">See Favorites</button>
+<ul class="image-container">
      <img class="resize" [src] = "event.images" />
      <li class = "eventLink"> <a href ="{{event.url}}"> View full event details at Ticketmaster</a> </li>
 </ul>
 <div class = "moreInfo">
-    <button (click)="toggleInfo()" >More Info</button>
+    <button class="moreInfoButton" (click)="toggleInfo()" >More Info</button>
     <ul [class.showInfo] = "showInfo === false">
         <li>Date: {{event.localDate}}</li>
         <li>Time: {{event.localTime}}</li>
