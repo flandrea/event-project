@@ -1,26 +1,71 @@
-h1{
-    color: #03A08D;
-    font-family: 'Rye', cursive;
-    -webkit-text-stroke: .025px black;
-    text-shadow: 2px 2px black;
-    font-size: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 400px;
-}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
 
-input{
+  .container {
+    display: flex;
+    background-color: #03a08d;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+  }
+
+  input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 375px;
+  }
+
+  .center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
     font-size: 18px;
-    font-family: 'Rye', cursive;
+  }
+  .searchFields {
+   
+    flex-direction: column;
+    margin-left: 50px;
+  }
 }
 
-button{
-    font-size: 18px;
-    font-family: 'Rye', cursive;
+h1 {
+  color: #03a08d;
+  font-family: "Rye", cursive;
+  -webkit-text-stroke: 0.025px black;
+  text-shadow: 2px 2px black;
+  font-size: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
 }
 
-.searchFields{
-    margin-right: auto;
-    margin-left: auto;
-    width: 800px;
+input {
+  font-size: 18px;
+  font-family: navigo, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+button {
+  font-size: 18px;
+  font-family: navigo, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.searchFields {
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
